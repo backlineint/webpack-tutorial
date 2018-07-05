@@ -5,5 +5,6 @@ exports.devServer = ({ host, port } = {}) => ({
     port, // defaults to 8080
     open: true,
     overlay: true,
+    hotOnly: true,
   },
 });
