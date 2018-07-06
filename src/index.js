@@ -1,4 +1,5 @@
 import component from './component';
+import './main.scss';
 
 let demoComponent = component();
 

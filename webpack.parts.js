@@ -8,3 +8,25 @@ exports.devServer = ({ host, port } = {}) => ({
     hotOnly: true,
   },
 });
+
+exports.loadCSS = ({ include, exclude } = {}) => ({
+  module: {
+    rules: [
+      {
+        test: /\.scss$/,
+        include, 
+        exclude,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            },
+          },
+          'sass-loader',
+        ],
+      }
+    ]
+  }
+});
