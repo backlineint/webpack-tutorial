@@ -43,6 +43,12 @@ exports.loadSCSS = ({ include, exclude } = {}) => ({
               importLoaders: 1,
             },
           },
+          {
+            loader: "postcss-loader",
+            options: {
+              plugins: () => [require("autoprefixer")()],
+            },
+          },
           'sass-loader',
         ],
       }
@@ -94,6 +100,12 @@ exports.extractSCSS = ({ include, exclude, use = [] }) => {
                 importLoaders: 1,
               },
             },
+            {
+              loader: "postcss-loader",
+              options: {
+                plugins: () => [require("autoprefixer")()],
+              },
+            },
             'sass-loader',
           ]
         },
@@ -102,3 +114,10 @@ exports.extractSCSS = ({ include, exclude, use = [] }) => {
     plugins: [plugin],
   };
 };
+
+exports.autoprefix = () => ({
+  loader: "postcss-loader",
+  options: {
+    plugins: () => [require("autoprefixer")()],
+  },
+});

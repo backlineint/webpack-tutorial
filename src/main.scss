@@ -5,3 +5,9 @@ html {
     background: $bodyColor;
   }
 }
+
+// Used to demonstrate that autoprefixer is functioning
+.myclass {
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+}

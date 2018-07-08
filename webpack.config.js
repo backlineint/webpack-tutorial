@@ -21,7 +21,7 @@ const commonConfig = merge([
 
 const productionConfig = merge([
   parts.extractCSS({
-    use: "css-loader",
+    use: ['css-loader', parts.autoprefix()],
   }),
   parts.extractSCSS({}),
   parts.purifyCSS({
