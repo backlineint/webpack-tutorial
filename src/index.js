@@ -1,4 +1,6 @@
 import component from './component';
+
+import "purecss";
 import './main.scss';
 
 let demoComponent = component();
