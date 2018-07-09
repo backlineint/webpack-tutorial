@@ -3,6 +3,9 @@
 html {
   body {
     background: $bodyColor;
+    background-image: url("./logo.jpg"); 
+    background-repeat: no-repeat; 
+    background-position: center;
   }
 }
 
